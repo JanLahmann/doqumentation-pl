@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.55388bbc.js" defer="defer"></script>
-<script src="/assets/js/main.c17d7700.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.12516f22.js" defer="defer"></script>
+<script src="/assets/js/main.e1604ede.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -49,15 +49,15 @@
 </ul>
 <p><a href="https://scipy.org/" target="_blank" rel="noopener noreferrer" class="">SciPy</a> to darmowa biblioteka Pythona o otwartym kodzie źródłowym, zawierająca pakiety przydatne w wielu dziedzinach obliczeń naukowych, w tym optymalizacji. W szczególności SciPy posiada pakiet optymalizacyjny zawierający funkcję <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html" target="_blank" rel="noopener noreferrer" class="">minimize</a>:</p>
 <p><code>from scipy.optimize import minimize</code>
-Funkcja <code>minimize</code> ma kilka argumentów, ale najbardziej istotne dla chemii kwantowej są:</p>
+This minimize function has several arguments, but the most relevant arguments for quantum chemistry are:</p>
 <ul>
-<li class="">Funkcja kosztu (<code>cost_func</code>). Jest powiązana z hamiltonianem, ale obejmuje też dodatkowe elementy, takie jak wyznaczanie wartości oczekiwanej przy użyciu Estimatora, a w przypadku obliczeń stanów wzbudzonych może zawierać warunki ortogonalności.</li>
-<li class="">Stan początkowy (<code>x0</code>) układu, często stan Hartree-Focka</li>
-<li class="">Pozostałe argumenty, w tym argumenty samej funkcji kosztu</li>
-<li class="">Parametr <code>method</code> ustawiony na wybrany klasyczny optymalizator</li>
-<li class="">Opcje dla klasycznego optymalizatora (nie mylić z opcjami Session omówionymi w następnym rozdziale)</li>
+<li class="">The cost function (<code>cost_func</code>). This is related to the Hamiltonian, but also includes some complexities, such as determining the expectation value by using Estimator, and in the case of excited state calculations, might include orthogonality conditions.</li>
+<li class="">An initial state (x0) for the system, often the Hartree Fock state</li>
+<li class="">Other arguments, including arguments of the cost function itself</li>
+<li class="">The method set to the classical optimizer you select</li>
+<li class="">Options for the classical optimizer (not to be confused with Session options discussed in the next section)</li>
 </ul>
-<p>Poniżej znajduje się przykładowy kod. Ograniczamy się tutaj do dwóch ostatnich argumentów.</p>
+<p>Some example code is shown below. We restrict our discussion here to the last two arguments.</p>
 <div class="language-minimize( codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-minimize( codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    cost_func,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    x0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    args=(ansatz, hamiltonian, estimator),</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    method=&quot;cobyla&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    options={&quot;maxiter&quot;: 200})</span><br></span></code></pre></div></div>
 <p>SciPy zawiera dokumentację wszystkich dostępnych metod minimize. Oto kilka godnych uwagi przykładów — wszystkie są metodami minimalizacji skalarnej funkcji jednej lub więcej zmiennych:</p>
 <ul>

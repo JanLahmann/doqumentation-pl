@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.55388bbc.js" defer="defer"></script>
-<script src="/assets/js/main.c17d7700.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.12516f22.js" defer="defer"></script>
+<script src="/assets/js/main.e1604ede.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -601,6 +601,15 @@ Parametry całkowite <span class="katex"><span class="katex-mathml"><math xmlns=
 <p><strong>Siła funkcji skrótu</strong>: Ponieważ DSA używa funkcji skrótu jako części procesu generowania i weryfikacji podpisu, słaba funkcja skrótu mogłaby naruszyć bezpieczeństwo podpisu cyfrowego. Na przykład użycie SHA-1 z DSA jest odradzane, a zalecane jest SHA-2 lub wyższe.</p>
 </li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Figure 1. Symmetric key exchange with RSA" src="/assets/images/key_exchange_rsa-0056e276d86c6be75e114cbfc3bdae37.svg" width="1081" height="499" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 1. Diffie-Hellman key exchange" src="/assets/images/key_exchange_dh-6e4117c0c363fa1146d87b826faab166.svg" width="1030" height="512" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 2. Key Exchange Protocol" src="/assets/images/kep_akc-f8d03a6c5ff364e0793d3b4595a61cd8.svg" width="946" height="439" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 3. Key Encapsulation Mechanism" src="/assets/images/kem_akc-b03d2bfa331a3572b241c1953d01b742.svg" width="1219" height="483" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 2. Digital signatures with RSA" src="/assets/images/dig_sig_rsa-9bf2bf6cc203e070765e96a88ff25f04.svg" width="1277" height="580" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 4. Digital signatures with asymmetric key cryptography" src="/assets/images/dig_sig_akc-f610f6ce7612569f798be994c758d4cd.svg" width="1410" height="395" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 5. Issuing and signing digital certificates using asymmetric key cryptography" src="/assets/images/ca_akc-ba98473a388be751f61844ce4f5f0f34.svg" width="1130" height="488" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 2. Authenticated key exchange with Diffie-Hellman and DSA" src="/assets/images/auth_key_exchange-8a20f0c63ebab8213bf681c4af4867f1.svg" width="949" height="556" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 1. Asymmetric Key Encryption" src="/assets/images/akc-fb5811e42f6ea586dc87e44d9351a4c5.svg" width="1561" height="354" class="img_ev3q"></p>
 <p>Oprócz tego, solidna implementacja DSA powinna również chronić przed innymi typami ataków wymierzonych w kryptografię klucza asymetrycznego, jak wcześniej opisano.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="authenticated-key-exchange-with-diffie-hellman-and-dsa">Uwierzytelniona wymiana kluczy z Diffie-Hellmanem i DSA<a href="#authenticated-key-exchange-with-diffie-hellman-and-dsa" class="hash-link" aria-label="Bezpośredni link do Uwierzytelniona wymiana kluczy z Diffie-Hellmanem i DSA" title="Bezpośredni link do Uwierzytelniona wymiana kluczy z Diffie-Hellmanem i DSA" translate="no">​</a></h3>
 <p>Nowoczesne protokoły bezpieczeństwa sieciowego, takie jak <a href="https://en.wikipedia.org/w/index.php?title=Transport_Layer_Security&amp;oldid=1155601531" target="_blank" rel="noopener noreferrer" class="">Transport Layer Security (TLS)</a> i wiele innych, polegają na łączeniu funkcjonalności wymiany kluczy i uwierzytelniania. W kontekście Diffie-Hellmana uwierzytelnianie jest potrzebne do ochrony przed atakami MITM. W poniższych komórkach kodu ilustrujemy przykład, w którym Alice i Bob wykonują uwierzytelnioną wymianę kluczy, łącząc protokoły Diffie-Hellmana i DSA. W tym celu użyjemy biblioteki Pythona <code>cryptography</code>.</p>
