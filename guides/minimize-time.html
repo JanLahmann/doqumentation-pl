@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.0b62fc7a.js" defer="defer"></script>
-<script src="/assets/js/main.e492239d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3ce27ffd.js" defer="defer"></script>
+<script src="/assets/js/main.10077af6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p>Ustaw limity czasu wykonania: możesz ograniczyć czas działania każdego zadania, wsadu (batch) lub Session. Szczegóły znajdziesz w artykule <a class="" href="/guides/max-execution-time">Maksymalny czas wykonania dla obciążeń Qiskit Runtime</a>.</p>
 </li>
 <li class="">
-<p>Używaj tylko niezbędnych ustawień tłumienia i mitygacji błędów, ponieważ wyższe wartości mogą wydłużyć czas wykonywania zadań. Szczegóły znajdziesz w artykułach <a class="" href="/guides/runtime-options-overview">Wprowadzenie do opcji</a>, <a class="" href="/guides/configure-error-suppression">Konfigurowanie tłumienia błędów</a> oraz <a class="" href="/guides/configure-error-mitigation">Konfigurowanie mitygacji błędów</a>.</p>
+<p>Używaj tylko niezbędnych ustawień tłumienia i mitygacji błędów, ponieważ wyższe wartości mogą wydłużyć czas wykonywania zadań. Szczegóły znajdziesz w artykułach <a class="" href="/guides/runtime-options-overview">Wprowadzenie do opcji</a>, <a class="" href="/guides/error-mitigation-and-suppression-techniques">Konfigurowanie tłumienia błędów</a> oraz <a class="" href="/guides/error-mitigation-and-suppression-techniques">Konfigurowanie mitygacji błędów</a>.</p>
 </li>
 <li class="">
 <p>Jeśli uruchamiasz wiele zadań zawierających te same (prawdopodobnie sparametryzowane) Circuit i korzystasz z metody mitygacji błędów wymagającej modeli szumu, takiej jak PEA i PEC, rozważ użycie <code>NoiseLearner</code>. Ten program pomocniczy pozwala nauczyć model szumu Circuit raz i ponownie wykorzystywać go w kolejnych zapytaniach do Estimator. Pamiętaj, że model szumu traci aktualność po pewnym czasie, dlatego jest to praktyczne tylko wtedy, gdy między zadaniami nie ma długich przerw (na przykład w ramach jednej Session). Więcej szczegółów znajdziesz w artykule <a class="" href="/guides/noise-learning">Pomocnik uczenia szumu
