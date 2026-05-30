@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.9c34c387.js" defer="defer"></script>
-<script src="/assets/js/main.dba211ce.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.dbb30237.js" defer="defer"></script>
+<script src="/assets/js/main.4e67100c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -47,8 +47,6 @@ Użyteczna CHF powinna spełniać kilka kluczowych właściwości:</p>
 <li class=""><strong>Nieodwracalność:</strong> CHF jest <abbr title="A mathematical function that is relatively easy to compute in one direction but extremely difficult to reverse." style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help"><em>funkcją jednokierunkową</em></abbr>, co oznacza, że mając digest, powinno być niewykonalne odwrócenie procesu haszowania i odtworzenie danych wejściowych.</li>
 <li class=""><strong>Przybliżona injektywność:</strong> Choć CHF są funkcjami wiele-do-jednego, powinny wyglądać jak funkcje jeden-do-jednego. Osiąga się to przez połączenie ogromnego rozmiaru przestrzeni wyjściowej z efektem lawinowym, w którym drobne zmiany na wejściu prowadzą do zupełnie różnych wartości digest. Ta właściwość jest znana jako przybliżona injektywność.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Fig 2: Digital signatures" src="/assets/images/digital-signature-f30b9f1a727ed5ce7e5c45f780a514fe.svg" width="1259" height="523" class="img_ev3q"></p>
-<p><img decoding="async" loading="lazy" alt="Fig 1: Secure hashing for data integrity checks" src="/assets/images/data-integrity-89f9ea689b46a867d9b3f39648f50cba.svg" width="983" height="445" class="img_ev3q"></p>
 <p>Mając to na uwadze, można zweryfikować kawałek danych względem oryginału, porównując digest tych danych z digest oryginału.</p>
 <ul>
 <li class="">Jeśli dwa digesty są zgodne, możemy z dużym prawdopodobieństwem być pewni, że dane są identyczne z oryginałem.</li>
@@ -72,12 +70,12 @@ Najpierw pokazujemy, jak niewielka różnica w tekstach jawnych prowadzi do bard
 <ul>
 <li class=""><strong>Sprawdzanie integralności danych:</strong> Funkcje hash można wykorzystać do tworzenia <abbr title="Powszechnie stosowana technika w kryptografii służąca do wykrywania błędów podczas transmisji danych, polegająca na dodaniu wartości (często wyprowadzonej z samych danych) do danych w celu uzyskania wartości sumy kontrolnej. Odbiorca może następnie wykonać to samo obliczenie, aby porównać sumy kontrolne i zweryfikować autentyczność." style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help">sumy kontrolnej</abbr> dla zestawu danych. Wszelkie modyfikacje danych, celowe lub nie, spowodują powstanie innej sumy kontrolnej, alertując systemy lub użytkowników o zmianie. Suma kontrolna jest też zazwyczaj znacznie bardziej zwarta niż oryginalne dane, co sprawia, że porównywanie sum kontrolnych jest bardzo szybkie.</li>
 </ul>
-<p><img decoding="async" loading="lazy" src="/learning/images/courses/quantum-safe-cryptography/cryptographic-hash-functions/data-integrity.avif" alt="Fig 1: Secure hashing for data integrity checks" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Fig 1: Secure hashing for data integrity checks" src="/assets/images/data-integrity-89f9ea689b46a867d9b3f39648f50cba.svg" width="983" height="445" class="img_ev3q"></p>
 <p><em>Rysunek 1. Bezpieczne haszowanie na potrzeby sprawdzania integralności danych</em></p>
 <ul>
 <li class=""><strong>Podpisy cyfrowe:</strong> Kryptograficzne hasze są niezbędne do działania podpisów cyfrowych, ponieważ wiążą się z porównywaniem kryptograficznie zahaszowanych wiadomości w celu potwierdzenia autentyczności i integralności przy jednoczesnym zachowaniu prywatności.</li>
 </ul>
-<p><img decoding="async" loading="lazy" src="/learning/images/courses/quantum-safe-cryptography/cryptographic-hash-functions/digital-signature.avif" alt="Fig 2: Digital signatures" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Fig 2: Digital signatures" src="/assets/images/digital-signature-f30b9f1a727ed5ce7e5c45f780a514fe.svg" width="1259" height="523" class="img_ev3q"></p>
 <p><em>Rysunek 2. Podpisy cyfrowe</em></p>
 <ul>
 <li class=""><strong>Blockchain i kryptowaluty:</strong> Kryptowaluty takie jak Bitcoin w dużym stopniu opierają się na CHF, szczególnie przy tworzeniu integralności transakcji i umożliwianiu mechanizmów konsensusu, takich jak <em>proof of work</em>.</li>
@@ -103,7 +101,7 @@ Najpierw pokazujemy, jak niewielka różnica w tekstach jawnych prowadzi do bard
 <ul>
 <li class=""><a href="https://en.wikipedia.org/w/index.php?title=MD5&amp;oldid=1161719955" target="_blank" rel="noopener noreferrer" class="">MD5</a> i <a href="https://en.wikipedia.org/w/index.php?title=SHA-1&amp;oldid=1161401043" target="_blank" rel="noopener noreferrer" class="">SHA-1</a>, choć wciąż spotykane w mniej wrażliwych zastosowaniach, są uznawane za przestarzałe pod względem collision resistance i nie są zalecane w nowych systemach.
 SHA-256, będący częścią rodziny <a href="https://en.wikipedia.org/w/index.php?title=SHA-2&amp;oldid=1155462953" target="_blank" rel="noopener noreferrer" class="">SHA-2</a>, jest szeroko stosowany i aktualnie bezpieczny dla większości zastosowań.</li>
-<li class=""><a href="https://en.wikipedia.org/w/index.php?title=SHA-3&amp;oldid=1161463128" target="_blank" rel="noopener noreferrer" class="">SHA-3</a> to nowszy standard wybrany przez NIST w 2015 roku jako zwycięzca konkursu NIST na funkcję hash. Jest zaprojektowany jako bezpośredni zamiennik SHA-2, ale ma też inne wewnętrzne cechy i jest odporny na pewne typy ataków, które mogą być skuteczne przeciwko SHA-2.</li>
+<li class=""><a href="https://en.wikipedia.org/w/index.php?title=SHA-3&amp;oldid=1161463128" target="_blank" rel="noopener noreferrer" class="">SHA-3</a> to nowszy standard wybrany przez NIST w 2015 roku jako zwycięzca konkursu NIST na funkcję hash. Jest zaprojektowany jako bezpośredni zamiennik SHA-2, ale ma też inne wewn ętrzne cechy i jest odporny na pewne typy ataków, które mogą być skuteczne przeciwko SHA-2.</li>
 <li class=""><a href="https://en.wikipedia.org/w/index.php?title=BLAKE_(hash_function)&amp;oldid=1161463384" target="_blank" rel="noopener noreferrer" class="">Blake2 i Blake3</a> to kryptograficzne funkcje hash szybsze niż MD5, SHA-1, SHA-2 i SHA-3, lecz co najmniej tak samo bezpieczne jak aktualny standard, SHA-3. Są coraz częściej stosowane w nowych systemach, szczególnie tam, gdzie liczy się szybkość.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-risks-to-traditional-cryptographic-hashing">Quantum risks to traditional cryptographic hashing<a href="#quantum-risks-to-traditional-cryptographic-hashing" class="hash-link" aria-label="Bezpośredni link do Quantum risks to traditional cryptographic hashing" title="Bezpośredni link do Quantum risks to traditional cryptographic hashing" translate="no">​</a></h3>
