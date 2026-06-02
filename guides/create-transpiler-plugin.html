@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.177b537d.js" defer="defer"></script>
-<script src="/assets/js/main.8ad6c469.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.65f21305.js" defer="defer"></script>
+<script src="/assets/js/main.92789a0a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -106,7 +106,7 @@ Dostępne są następujące argumenty kluczowe:</p>
 <li class=""><code>target</code> wskazuje docelowy Backend, umożliwiając wtyczce dostęp do wszystkich informacji specyficznych dla danego celu, takich jak mapa sprzężeń, obsługiwany zestaw Gate&#x27;ów i inne.</li>
 <li class=""><code>coupling_map</code> wskazuje wyłącznie mapę sprzężeń i jest używany tylko wtedy, gdy <code>target</code> nie jest podany.</li>
 <li class=""><code>qubits</code> wskazuje listę Qubitów, na których zdefiniowany jest obiekt wysokiego poziomu — w przypadku gdy synteza jest wykonywana na fizycznym Circuit. Wartość <code>None</code> oznacza, że układ nie został jeszcze wybrany i fizyczne Qubity w docelowym Backend lub mapie sprzężeń, na których operuje ta operacja, nie zostały jeszcze ustalone.</li>
-<li class=""><code>options</code> — słownik konfiguracyjny dowolnej postaci przeznaczony dla opcji specyficznych dla wtyczki. Jeśli twoja wtyczka obsługuje takie opcje, powinnaś je wyraźnie udokumentować.</li>
+<li class=""><code>options</code> — słownik konfiguracyjny dowolnej postaci przeznaczony dla opcji specyficznych dla wtyczki. Jeśli twoja wtyczka obsługuje takie opcje, powinieneś je wyraźnie udokumentować.</li>
 </ul>
 <p>Metoda <code>run</code> zwraca <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class="">QuantumCircuit</a>
 reprezentujący Circuit zsyntetyzowany z danego obiektu wysokiego poziomu.
