@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.d27d085f.js" defer="defer"></script>
-<script src="/assets/js/main.f11e8610.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.711495c4.js" defer="defer"></script>
+<script src="/assets/js/main.75cfaba7.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,27 +29,37 @@
 <p>Jednym ze sposobów na umożliwienie głębszej wstecznej propagacji przez Circuit przy jednoczesnym zapobieganiu nadmiernemu rozrostowi operatora jest obcinanie składników o małych współczynnikach zamiast dodawania ich do operatora. Obcinanie składników może skutkować mniejszą liczbą Circuit kwantowych do wykonania, jednak wiąże się to z pewnym błędem w końcowym obliczeniu wartości oczekiwanej, proporcjonalnym do wartości bezwzględnej współczynników obciętych składników.
 W tym samouczku zaimplementujemy <a href="https://quantum.cloud.ibm.com/docs/guides/serverless#qiskit-patterns-with-quantum-serverless" target="_blank" rel="noopener noreferrer" class="">wzorzec Qiskit</a> do symulacji dynamiki kwantowej łańcucha spinów Heisenberga z użyciem wstecznej propagacji operatorów:</p>
 <ul>
-<li class=""><strong>Krok 1: Odwzorowanie na problem kwantowy</strong>
+<li class="">
+<p><strong>Krok 1: Odwzorowanie na problem kwantowy</strong></p>
 <ul>
 <li class="">Odwzoruj ewoluujący w czasie Hamiltonian na obwód kwantowy</li>
 </ul>
 </li>
-<li class=""><strong>Krok 2: Optymalizacja problemu</strong>
+<li class="">
+<p><strong>Krok 2: Optymalizacja problemu</strong></p>
 <ul>
-<li class="">Podziel Circuit na wycinki</li>
+<li class="">
+<p>Podziel Circuit na wycinki</p>
+</li>
 <li class="">
 <font color="#0F62FE">Wstecznie propaguj wycinki z Circuit na obserwowalną Pauliego</font>
 </li>
-<li class="">Połącz pozostałe wycinki w jeden obwód</li>
-<li class="">Transpiluj Circuit dla Backend</li>
+<li class="">
+<p>Połącz pozostałe wycinki w jeden obwód</p>
+</li>
+<li class="">
+<p>Transpiluj Circuit dla Backend</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>Krok 3: Wykonanie eksperymentów</strong>
+<li class="">
+<p><strong>Krok 3: Wykonanie eksperymentów</strong></p>
 <ul>
 <li class="">Oblicz wartość oczekiwaną przy użyciu zredukowanego Circuit i rozszerzonej obserwowalnej z <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> dla uproszczenia w tym notebooku</li>
 </ul>
 </li>
-<li class=""><strong>Krok 4: Rekonstrukcja wyników</strong>
+<li class="">
+<p><strong>Krok 4: Rekonstrukcja wyników</strong></p>
 <ul>
 <li class="">N.A.</li>
 </ul>
@@ -124,6 +134,7 @@ circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_2.png)
 
 ## Krok 2: Optymalizacja problemu \{#step-2-optimize-the-problem}
+
 ### Tworzenie wycinków Circuit do wstecznej propagacji \{#create-circuit-slices-to-backpropagate}
 
 Pamiętaj, że funkcja ``backpropagate`` będzie wstecznie propagować całe wycinki Circuit naraz, więc sposób podziału na wycinki może mieć wpływ na skuteczność wstecznej propagacji dla danego problemu. Tutaj pogrupujemy Gate tego samego typu w wycinki, używając funkcji [slice_by_gate_types](https://qiskit.github.io/qiskit-addon-utils/stubs/qiskit_addon_utils.slicing.slice_by_gate_types.html).
@@ -205,8 +216,8 @@ truncation_error_budget = setup_budget(max_error_per_slice=0.005)
 
 Zauważ, że przydzielając błąd `5e-3` na wycinek dla obcinania, jesteśmy w stanie usunąć 3 dodatkowe wycinki z Circuit, pozostając w ramach pierwotnego budżetu 8 przemiennych grup Pauliego w obserwowalnej. Domyślnie `backpropagate` używa normy L1 obciętych współczynników do ograniczania całkowitego błędu wynikającego z obcinania. Informacje o innych opcjach znajdziesz w [poradniku praktycznym dotyczącym określania p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html).
 
-W tym konkretnym przykładzie, gdzie wstecznie propagowaliśmy 10 wycinków, całkowity błąd obcinania nie powinien przekroczyć ``(5e-3 błędu/wycinek) * (10 wycinków) = 5e-2``.
-Więcej na temat rozdzielania budżetu błędu między wycinki znajdziesz w [tym poradniku praktycznym](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html).
+W tym konkretnym przykładzie, w którym wykonaliśmy propagację wsteczną 10 wycinków, całkowity błąd obcięcia nie powinien przekraczać ``(5e-3 error/slice) * (10 slices) = 5e-2``.
+Aby dowiedzieć się więcej o rozkładaniu budżetu błędu między wycinkami, zapoznaj się z [tym przewodnikiem how-to](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html).
 
 ```python
 # Run the same experiment but truncate observable terms with small coefficients
@@ -266,6 +277,7 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 ```
 
 ## Krok 3: Wykonanie eksperymentów kwantowych \{#step-3-execute-quantum-experiments}
+
 ### Obliczanie wartości oczekiwanej \{#calculate-expectation-value}
 
 Na koniec możemy uruchomić eksperymenty z wsteczną propagacją i porównać je z pełnym eksperymentem przy użyciu bezszumowego [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator). Możemy zobaczyć, że wartość oczekiwana uzyskana przy wstecznej propagacji bez obcinania jest równoważna dokładnej wartości w granicach precyzji numerycznej.

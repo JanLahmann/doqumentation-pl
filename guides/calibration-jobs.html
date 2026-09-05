@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.d27d085f.js" defer="defer"></script>
-<script src="/assets/js/main.f11e8610.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.711495c4.js" defer="defer"></script>
+<script src="/assets/js/main.75cfaba7.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/calibration-jobs" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,51 +28,81 @@
 <p>Aby zapewnić stałą wydajność, komputery kwantowe IBM® są często monitorowane pod kątem parametrów, które mogą dryfować w czasie, a w razie potrzeby przeprowadzane są kalibracje i codzienny benchmarking. Ta strona opisuje trzy procesy — monitorowanie, kalibrowanie i benchmarking — które współdziałają, aby zapewnić, że flota komputerów kwantowych IBM pozostaje możliwie stabilna, przewidywalna i dostępna dla użytkowników.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring">Monitorowanie<a href="#monitoring" class="hash-link" aria-label="Bezpośredni link do Monitorowanie" title="Bezpośredni link do Monitorowanie" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="parameter-monitoring">Monitorowanie parametrów<a href="#parameter-monitoring" class="hash-link" aria-label="Bezpośredni link do Monitorowanie parametrów" title="Bezpośredni link do Monitorowanie parametrów" translate="no">​</a></h3>
-<p>Krótkie zadania monitorowania parametrów są wykonywane mniej więcej co godzinę, automatycznie przeplatane między zadaniami użytkowników, z wykorzystaniem pełnego stosu oprogramowania Qiskit Runtime. Wyniki tych zadań są analizowane w celu sprawdzenia, czy jakiekolwiek parametry zaczęły odbiegać od dopuszczalnych zakresów — najlepiej wychwytując problemy, zanim staną się na tyle poważne, aby zauważalnie wpłynąć na wydajność.</p>
+<p>Krótkie zadania monitorowania parametrów są wykonywane mniej więcej co godzinę, automatycznie przeplatane między zadaniami użytkowników, z wykorzystaniem pełnego stosu oprogramowania IBM Quantum Compute Service. Wyniki tych zadań są analizowane w celu sprawdzenia, czy jakiekolwiek parametry zaczęły odbiegać od dopuszczalnych zakresów — najlepiej wychwytując problemy, zanim staną się na tyle poważne, aby zauważalnie wpłynąć na wydajność.</p>
 <p>Niektóre z monitorowanych parametrów obejmują:</p>
 <ul>
-<li class="">Kąty odczytu, amplitudy i próg dyskryminatora, zapewniające dokładne rozróżnianie stanów, niski przeciek i stabilne działanie. Obejmuje to parametry operacyjne naszych wzmacniaczy kwantowo ograniczonych.</li>
-<li class="">Operacje jednoQubitowych i dwuQubitowych Gate&#x27;ów, potwierdzające, że działają zgodnie z oczekiwaniami, zachowując właściwe kąty obrotu i minimalizując błędy fazy i amplitudy.</li>
-<li class="">Sygnały aktywności TLS.</li>
+<li class="">
+<p>Kąty odczytu, amplitudy i próg dyskryminatora, zapewniające dokładne rozróżnianie stanów, niski przeciek i stabilne działanie. Obejmuje to parametry operacyjne naszych wzmacniaczy kwantowo ograniczonych.</p>
+</li>
+<li class="">
+<p>Operacje jednoQubitowych i dwuQubitowych Gate&#x27;ów, potwierdzające, że działają zgodnie z oczekiwaniami, zachowując właściwe kąty obrotu i minimalizując błędy fazy i amplitudy.</p>
+</li>
+<li class="">
+<p>Sygnały aktywności TLS.</p>
+</li>
 </ul>
 <p>Jeśli wyniki tych zadań monitorowania wskazują na umiarkowane odchylenia od oczekiwanej wydajności, uruchamiane są odpowiednie zadania kalibracyjne. W przypadku wykrycia poważnej aktywności TLS strategia kalibracji Gate&#x27;ów związanych z dotkniętymi Qubitami może być automatycznie modyfikowana (i może obejmować wstrzymanie kalibracji) do czasu, aż aktywność TLS spadnie do dopuszczalnego poziomu.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="holistic-monitoring">Monitorowanie holistyczne<a href="#holistic-monitoring" class="hash-link" aria-label="Bezpośredni link do Monitorowanie holistyczne" title="Bezpośredni link do Monitorowanie holistyczne" translate="no">​</a></h3>
-<p>Obok zadań monitorujących poszczególne parametry działają zadania monitorujące wydajność komputera kwantowego w sposób bardziej holistyczny — na przykład testy sprawdzające wierność generowanych stanów Bella, a także testy ułamkowych Gate&#x27;ów i dynamicznych Circuit&#x27;ów na komputerach kwantowych obsługujących te funkcje. Celem tych testów, które również działają przez pełny stos Qiskit Runtime przeplatany z zadaniami użytkowników, jest wydajne sprawdzanie ogólnego zachowania sprzętu i oprogramowania. Jeśli testy te wykryją znaczny spadek wydajności, komputer kwantowy automatycznie wstrzyma kolejkę zadań do czasu rozwiązania problemu, zapewniając, że zadania użytkowników nie zostaną uruchomione, dopóki urządzenie nie będzie działać zgodnie z oczekiwaniami.</p>
+<p>Obok zadań monitorujących poszczególne parametry działają zadania monitorujące wydajność komputera kwantowego w sposób bardziej holistyczny — na przykład testy sprawdzające wierność generowanych stanów Bella, a także testy ułamkowych Gate&#x27;ów i dynamicznych Circuit&#x27;ów na komputerach kwantowych obsługujących te funkcje. Celem tych testów, które również działają przez pełny stos Quantum Compute przeplatany z zadaniami użytkowników, jest wydajne sprawdzanie ogólnego zachowania sprzętu i oprogramowania. Jeśli testy te wykryją znaczny spadek wydajności, komputer kwantowy automatycznie wstrzyma kolejkę zadań do czasu rozwiązania problemu, zapewniając, że zadania użytkowników nie zostaną uruchomione, dopóki urządzenie nie będzie działać zgodnie z oczekiwaniami.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="calibrating">Kalibrowanie<a href="#calibrating" class="hash-link" aria-label="Bezpośredni link do Kalibrowanie" title="Bezpośredni link do Kalibrowanie" translate="no">​</a></h2>
 <p>Kalibracje są wyzwalane, gdy zadania monitorowania wskazują, że parametry takie jak amplitudy impulsów lub kąty odchyliły się od swoich idealnych wartości. Działają przez cały dzień pomiędzy zadaniami użytkowników, dlatego nie ma ustalonego przedziału czasowego, w którym kalibracje się zaczynają i kończą. Są uruchamiane tylko na Qubitach/Gate&#x27;ach, dla których monitorowanie parametrów zidentyfikowało konkretne problemy, wraz z wszystkimi Qubitami wymaganymi do jednoczesnego działania zgodnie ze specyficznymi regułami grupowania. Na QPU Heron łączny czas poświęcony na kalibracje wynosi zazwyczaj mniej niż dwie godziny dziennie.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-operations">Operacje jednoQubitowe<a href="#single-qubit-operations" class="hash-link" aria-label="Bezpośredni link do Operacje jednoQubitowe" title="Bezpośredni link do Operacje jednoQubitowe" translate="no">​</a></h3>
 <p>Te kalibracje zapewniają dokładną implementację jednoQubitowych Gate&#x27;ów: sx, x, rx (ułamkowe). Dostosowujemy:</p>
 <ul>
-<li class="">Częstotliwości Qubitów</li>
-<li class="">Amplitudy i fazy impulsów</li>
+<li class="">
+<p>Częstotliwości Qubitów</p>
+</li>
+<li class="">
+<p>Amplitudy i fazy impulsów</p>
+</li>
 </ul>
 <p>Te kalibracje są grupowane na dotkniętych Qubitach i wykonywane równolegle tam, gdzie to możliwe, a strategie grupowania są dostosowane do każdego rodzaju kalibracji.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-operations">Operacje dwuQubitowe<a href="#two-qubit-operations" class="hash-link" aria-label="Bezpośredni link do Operacje dwuQubitowe" title="Bezpośredni link do Operacje dwuQubitowe" translate="no">​</a></h3>
 <ul>
-<li class="">Amplitudy i fazy Gate&#x27;ów CZ i RZZ (dla procesorów Heron i Nighthawk)</li>
-<li class="">Amplitudy i fazy Gate&#x27;ów ECR (dla procesorów Eagle)</li>
+<li class="">
+<p>Amplitudy i fazy Gate&#x27;ów CZ i RZZ (dla procesorów Heron i Nighthawk)</p>
+</li>
+<li class="">
+<p>Amplitudy i fazy Gate&#x27;ów ECR (dla procesorów Eagle)</p>
+</li>
 </ul>
 <p>Te kalibracje są uruchamiane partiami na Qubitach niebędących najbliższymi sąsiadami, aby zminimalizować przesłuch.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readout">Odczyt<a href="#readout" class="hash-link" aria-label="Bezpośredni link do Odczyt" title="Bezpośredni link do Odczyt" translate="no">​</a></h3>
 <ul>
-<li class="">Kąty impulsu odczytu</li>
-<li class="">Parametry dyskryminacji pomiarowej</li>
+<li class="">
+<p>Kąty impulsu odczytu</p>
+</li>
+<li class="">
+<p>Parametry dyskryminacji pomiarowej</p>
+</li>
 </ul>
 <p>Te kalibracje są uruchamiane jednocześnie na Qubitach wymagających kalibracji.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-calibrations-are-scheduled">Jak kalibracje są planowane<a href="#how-calibrations-are-scheduled" class="hash-link" aria-label="Bezpośredni link do Jak kalibracje są planowane" title="Bezpośredni link do Jak kalibracje są planowane" translate="no">​</a></h3>
 <ul>
-<li class="">Zadanie kalibracyjne nie może być uruchomione jednocześnie z zadaniem lub sesją.</li>
-<li class="">Dlatego podczas długich sesji komputer kwantowy może doświadczać zmniejszonej efektywnej stabilności z powodu opóźnionych lub rzadkich kalibracji.</li>
-<li class="">Dwa zadania przesłane jednocześnie mogą działać z różnymi zestawami kalibracji, w zależności od czasu.</li>
+<li class="">
+<p>Zadanie kalibracyjne nie może być uruchomione jednocześnie z zadaniem lub sesją.</p>
+</li>
+<li class="">
+<p>Dlatego podczas długich sesji komputer kwantowy może doświadczać zmniejszonej efektywnej stabilności z powodu opóźnionych lub rzadkich kalibracji.</p>
+</li>
+<li class="">
+<p>Dwa zadania przesłane jednocześnie mogą działać z różnymi zestawami kalibracji, w zależności od czasu.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking">Benchmarking<a href="#benchmarking" class="hash-link" aria-label="Bezpośredni link do Benchmarking" title="Bezpośredni link do Benchmarking" translate="no">​</a></h2>
 <p>Codzienny benchmarking zapewnia kompleksowy obraz wydajności komputera kwantowego i generuje wskaźniki przekazywane użytkownikom przez Qiskit. Pomagają użytkownikom wybierać Qubity, optymalizować kompilacje i lepiej przewidywać oczekiwaną wydajność Circuit&#x27;ów. Zgłoszone liczby możesz wyświetlić programowo lub na stronie <a href="https://quantum.cloud.ibm.com/computers" target="_blank" rel="noopener noreferrer" class="">Zasoby obliczeniowe</a> (kliknij dowolny QPU, aby otworzyć jego szczegółową kartę informacyjną). Więcej szczegółów na temat każdego wskaźnika znajdziesz w <a class="" href="/guides/qpu-information">dokumentacji</a>.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Dryft urządzenia</div><div class="admonitionContent_BuS1"><p>Wpływ dryfu urządzenia (degradacja wydajności sprzętu w czasie) zależy od wielu czynników, takich jak czas ostatniego uruchomienia kalibracji, konkretny przeprowadzony eksperyment, wszelka aktywność TLS i tak dalej. Jeśli dane obciążenie jest bardzo wrażliwe na wartości błędów parametrów urządzenia, możesz przeprowadzić benchmarking parametrów urządzenia w czasie rzeczywistym, postępując zgodnie z <a class="" href="/tutorials/real-time-benchmarking-for-qubit-selection">tym samouczkiem</a> w IBM Quantum Learning.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-performance">Wydajność jednoQubitowa<a href="#single-qubit-performance" class="hash-link" aria-label="Bezpośredni link do Wydajność jednoQubitowa" title="Bezpośredni link do Wydajność jednoQubitowa" translate="no">​</a></h3>
 <ul>
-<li class=""><a class="" href="/guides/qpu-information#median-sx-error">Randomizowany benchmarking</a> (RB) w grupach partyjnych</li>
-<li class="">Czasy koherencji dla <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> i <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></li>
-<li class=""><a class="" href="/guides/qpu-information#median-readout-error">Wskaźniki wierności pomiarowej</a></li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-sx-error">Randomizowany benchmarking</a> (RB) w grupach partyjnych</p>
+</li>
+<li class="">
+<p>Czasy koherencji dla <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> i <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></p>
+</li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-readout-error">Wskaźniki wierności pomiarowej</a></p>
+</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-performance">Wydajność dwuQubitowa<a href="#two-qubit-performance" class="hash-link" aria-label="Bezpośredni link do Wydajność dwuQubitowa" title="Bezpośredni link do Wydajność dwuQubitowa" translate="no">​</a></h3>
 <ul>
