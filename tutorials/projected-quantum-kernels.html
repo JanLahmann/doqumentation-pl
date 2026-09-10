@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.b67e7380.js" defer="defer"></script>
-<script src="/assets/js/main.d4334446.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e706f13.js" defer="defer"></script>
+<script src="/assets/js/main.87c0e2e9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/projected-quantum-kernels" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/projected-quantum-kernels" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,15 +29,15 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Cele nauki<a href="#learning-outcomes" class="hash-link" aria-label="Bezpośredni link do Cele nauki" title="Bezpośredni link do Cele nauki" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How projected quantum kernels (PQK) work and when they offer a potential quantum advantage.</p>
+<p>Jak działają rzutowane jądra kwantowe (PQK) i kiedy oferują potencjalną przewagę kwantową.</p>
 </li>
 <li class="">
-<p>How to run a PQK on hardware using a real-world dataset.</p>
+<p>Jak uruchomić PQK na sprzęcie przy użyciu rzeczywistego zbioru danych.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Wymagania wstępne<a href="#prerequisites" class="hash-link" aria-label="Bezpośredni link do Wymagania wstępne" title="Bezpośredni link do Wymagania wstępne" translate="no">​</a></h2>
 <ul>
-<li class=""><a class="" href="/learning/courses/quantum-machine-learning/quantum-kernel-methods">Quantum kernels</a> from the <a class="" href="/learning/courses/quantum-machine-learning">quantum machine learning course</a> in IBM Quantum® Learning</li>
+<li class=""><a class="" href="/learning/courses/quantum-machine-learning/quantum-kernel-methods">Kwantowe jądra</a> z <a class="" href="/learning/courses/quantum-machine-learning">kursu kwantowego uczenia maszynowego</a> w IBM Quantum® Learning</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Tło<a href="#background" class="hash-link" aria-label="Bezpośredni link do Tło" title="Bezpośredni link do Tło" translate="no">​</a></h2>
 <p>W tym samouczku pokazujemy, jak uruchomić <a href="https://www.nature.com/articles/s41467-021-22539-9" target="_blank" rel="noopener noreferrer" class="">rzutowane jądro kwantowe</a> (PQK) za pomocą Qiskit na rzeczywistym zbiorze danych biologicznych, na podstawie artykułu <a href="https://arxiv.org/abs/2507.22710" target="_blank" rel="noopener noreferrer" class="">Enhanced Prediction of CAR T-Cell Cytotoxicity with Quantum-Kernel Methods</a> <a href="#references" class="">[1]</a>.</p>

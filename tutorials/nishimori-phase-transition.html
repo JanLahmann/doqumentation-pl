@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.b67e7380.js" defer="defer"></script>
-<script src="/assets/js/main.d4334446.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e706f13.js" defer="defer"></script>
+<script src="/assets/js/main.87c0e2e9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/nishimori-phase-transition" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/nishimori-phase-transition" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,28 +29,28 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Efekty kształcenia<a href="#learning-outcomes" class="hash-link" aria-label="Bezpośredni link do Efekty kształcenia" title="Bezpośredni link do Efekty kształcenia" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Understand the Nishimori phase transition and how it manifests as the appearance of long-range entanglement in the random-bond Ising model.</p>
+<p>Rozumieć przejście fazowe Nishimoriego oraz to, jak objawia się ono jako pojawienie się dalekosiężnego splątania w modelu Isinga z losowymi wiązaniami.</p>
 </li>
 <li class="">
-<p>Implement the <em>generation of entanglement by measurement</em> (GEM) protocol on quantum hardware using mid-circuit measurements and constant-depth circuits.</p>
+<p>Implementować protokół <em>generowania splątania przez pomiar</em> (GEM) na sprzęcie kwantowym z wykorzystaniem pomiarów w trakcie obwodu i obwodów o stałej głębokości.</p>
 </li>
 <li class="">
-<p>Characterize the transition by extracting the two-point correlation and the normalized variance of the magnetization from experimental data.</p>
+<p>Charakteryzować przejście fazowe poprzez wyznaczanie dwupunktowej korelacji i znormalizowanej wariancji magnetyzacji z danych eksperymentalnych.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Wymagania wstępne<a href="#prerequisites" class="hash-link" aria-label="Bezpośredni link do Wymagania wstępne" title="Bezpośredni link do Wymagania wstępne" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>The <a class="" href="/guides/measure-qubits">Measure qubits</a> guide, in particular the section on mid-circuit measurement that the GEM protocol relies on.</p>
+<p>Przewodnik <a class="" href="/guides/measure-qubits">Mierzenie qubitów</a>, w szczególności sekcja dotycząca pomiarów w trakcie obwodu, na których opiera się protokół GEM.</p>
 </li>
 <li class="">
-<p><a class="" href="/guides/simulate-with-qiskit-aer">Exact and noisy simulation with Qiskit Aer primitives</a>, which is how the small-scale section is executed.</p>
+<p><a class="" href="/guides/simulate-with-qiskit-aer">Dokładna i zaszumiona symulacja z prymitywami Qiskit Aer</a>, co jest sposobem wykonania sekcji na małą skalę.</p>
 </li>
 <li class="">
-<p><a class="" href="/tutorials/long-range-entanglement">Long-range entanglement with dynamic circuits</a>, a companion tutorial that uses the same measurement-based-entanglement paradigm.</p>
+<p><a class="" href="/tutorials/long-range-entanglement">Dalekosiężne splątanie z obwodami dynamicznymi</a>, samouczek towarzyszący używający tego samego paradygmatu splątania opartego na pomiarach.</p>
 </li>
 <li class="">
-<p><a href="https://www.ibm.com/quantum/blog/heavy-hex-lattice" target="_blank" rel="noopener noreferrer" class="">Heavy-hex lattice</a>, the IBM® hardware topology the plaquette lattice is built on.</p>
+<p><a href="https://www.ibm.com/quantum/blog/heavy-hex-lattice" target="_blank" rel="noopener noreferrer" class="">Sieć heavy-hex</a>, topologia sprzętu IBM® na której zbudowana jest sieć plakietek.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Tło<a href="#background" class="hash-link" aria-label="Bezpośredni link do Tło" title="Bezpośredni link do Tło" translate="no">​</a></h2>
