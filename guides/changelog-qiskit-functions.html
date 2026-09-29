@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.93517511.js" defer="defer"></script>
-<script src="/assets/js/main.5fa9dab7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d8b0f1ec.js" defer="defer"></script>
+<script src="/assets/js/main.9c7e440d.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-qiskit-functions" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,17 +29,17 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="july-2026">Lipiec 2026<a href="#july-2026" class="hash-link" aria-label="Bezpośredni link do Lipiec 2026" title="Bezpośredni link do Lipiec 2026" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Nowe kontrole wstępne (pre-flight checks) i nowe metody <code>backend</code> w Qiskit Functions v0.17.0: Nowe metody w <code>qiskit-ibm-catalog</code> pozwalają sprawdzić pojemność środowiska uruchomieniowego i dostęp do backendu przed uruchomieniem, a <code>run()</code> teraz sprawdza jedno i drugie przed przesłaniem zadania.</p>
+<p>Nowe kontrole wstępne (pre-flight checks) i nowe metody <code>backend</code> w Qiskit Functions v0.17.0: Nowe metody w <code>qiskit-ibm-catalog</code> pozwalają sprawdzić pozostały limit czasu Qiskit Runtime i dostęp do backendu przed uruchomieniem, a <code>run()</code> teraz sprawdza jedno i drugie przed przesłaniem zadania.</p>
 <ul>
 <li class="">
 <p><strong>Co nowego</strong></p>
 <ul>
 <li class="">
-<p>Gdy wywołujesz <code>run()</code> dla funkcji, usługa najpierw sprawdza trzy rzeczy: czy Twoja instancja ma dostępną pojemność środowiska uruchomieniowego, czy możesz połączyć się z wybranym backendem oraz czy co najmniej jeden backend jest dostępny. Jeśli coś jest nie tak, od razu otrzymujesz jasny komunikat o błędzie zamiast czekać w kolejce.</p>
+<p>Gdy wywołujesz <code>run()</code> dla funkcji, usługa najpierw sprawdza trzy rzeczy: czy Twoja instancja ma pozostały limit czasu Qiskit Runtime, czy możesz połączyć się z wybranym backendem oraz czy co najmniej jeden backend jest dostępny. Jeśli coś jest nie tak, od razu otrzymujesz jasny komunikat o błędzie zamiast czekać w kolejce.</p>
 <p>Możesz też samodzielnie sprawdzić te zasoby w dowolnym momencie:</p>
 <ul>
 <li class="">
-<p>Sprawdź pozostałą pojemność środowiska uruchomieniowego za pomocą <code>usage()</code>.</p>
+<p>Sprawdź pozostały limit czasu Qiskit Runtime za pomocą <code>usage()</code>.</p>
 </li>
 <li class="">
 <p>Wyświetl listę backendów dostępnych dla Twojej instancji za pomocą <code>backends()</code>.</p>
@@ -58,7 +58,7 @@
 <p><strong>Typowe przypadki użycia</strong></p>
 <ul>
 <li class="">
-<p>Sprawdź pozostałą pojemność przed długą serią zadań i pomiń uruchomienie, jeśli pozostałej pojemności nie wystarczy na jej ukończenie.</p>
+<p>Sprawdź pozostały limit przed długą serią zadań i pomiń uruchomienie, jeśli pozostałego limitu nie wystarczy na jej ukończenie.</p>
 </li>
 <li class="">
 <p>Wybierz backend w kodzie zamiast wpisywać nazwę na stałe.</p>
@@ -165,7 +165,7 @@
 <p>Podgląd Katalogu Qiskit Functions zapewnia użytkownikom planu Premium dostęp do eksploracji dostępnych funkcji, w tym tych napisanych przez IBM oraz przez innych członków naszego ekosystemu. Katalog zawiera dwa rodzaje funkcji: funkcje obwodów i funkcje aplikacyjne.</p>
 <ul>
 <li class="">
-<p><strong>Funkcje obwodów</strong> zapewniają uproszczony interfejs do uruchamiania obwodów. Otrzymują jako wejście dostarczone przez użytkownika abstrakcyjne obwody i obserwable, a następnie zarządzają syntezą, optymalizacją i wykonaniem reprezentatywnego obwodu ISA. Funkcje obwodów łączą najnowsze możliwości w zakresie transpilacji, tłumienia błędów i mitygacji błędów, aby udostępnić wydajność klasy użytkowej „od razu po wyjęciu z pudełka”. Pozwala to naukowcom obliczeniowym skupić się na mapowaniu swoich problemów na obwody, zamiast budować schemat dla każdego problemu od podstaw.</p>
+<p><strong>Funkcje obwodów</strong> zapewniają uproszczony interfejs do uruchamiania obwodów. Otrzymują jako wejście dostarczone przez użytkownika abstrakcyjne obwody i obserwable, a następnie zarządzają syntezą, optymalizacją i wykonaniem reprezentatywnego obwodu ISA. Funkcje obwodów łączą najnowsze możliwości w zakresie transpilacji, tłumienia błędów i mitygacji błędów, aby od razu zapewnić wydajność na poziomie użyteczności praktycznej (utility). Pozwala to naukowcom obliczeniowym skupić się na mapowaniu swoich problemów na obwody, zamiast budować schemat dla każdego problemu od podstaw.</p>
 </li>
 <li class="">
 <p><strong>Funkcje aplikacyjne</strong> obejmują zadania wyższego poziomu, takie jak eksplorowanie algorytmów i przypadków użycia specyficznych dla danej dziedziny. Programiści korporacyjni i analitycy danych mogą nie mieć wiedzy z zakresu informatyki kwantowej potrzebnej do pracy z obwodami i zamiast tego chcą wnieść swoją wiedzę dziedzinową, aby rozwijać algorytmy i aplikacje kwantowe. Dzięki funkcjom aplikacyjnym użytkownicy mogą wprowadzać swoje dane klasyczne i otrzymywać rozwiązania, dzięki czemu łatwiej mogą eksperymentować z włączeniem obliczeń kwantowych do swoich przepływów pracy specyficznych dla danej dziedziny.</p>
@@ -180,7 +180,7 @@
 <p><strong>Funkcje obwodów</strong></p>
 <ul>
 <li class="">
-<p>Q-CTRL udostępnia funkcję obwodu, która stosuje techniki sterowania kwantowego oparte na sztucznej inteligencji, dzięki którym użytkownicy mogą skutecznie skalować się do większych problemów.</p>
+<p>Q-CTRL udostępnia funkcję obwodu, która stosuje techniki sterowania kwantowego oparte na sztucznej inteligencji, dzięki którym użytkownicy mogą skutecznie przejść do większych problemów.</p>
 </li>
 <li class="">
 <p>Algorithmiq udostępnia funkcję obwodu, która stosuje TEM (mitygację błędów za pomocą sieci tensorowych), metodę mitygacji błędów pozwalającą uzyskać estymatory przy mniejszej liczbie strzałów niż metoda PEC (probabilistyczne anulowanie błędów).</p>

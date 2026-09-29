@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.93517511.js" defer="defer"></script>
-<script src="/assets/js/main.5fa9dab7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d8b0f1ec.js" defer="defer"></script>
+<script src="/assets/js/main.9c7e440d.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-qiskit" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,7 +28,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="january-2026">Styczeń 2026<a href="#january-2026" class="hash-link" aria-label="Bezpośredni link do Styczeń 2026" title="Bezpośredni link do Styczeń 2026" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Bazując na dynamice ustanowionej w całej serii v2.x, która skupiała się na pozycjonowaniu Qiskit jako wiodącej platformy dla hybrydowych przepływów pracy kwantowo-HPC, <a href="https://www.ibm.com/quantum/blog/qiskit-2-3-release-summary" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK v2.3</a> wprowadza znaczące rozszerzenie API w C wraz z szybszymi, bardziej elastycznymi narzędziami do budowania i optymalizacji obwodów kwantowych.</p>
+<p>Kontynuując kierunek obrany w serii v2.x, która skupiała się na pozycjonowaniu Qiskit jako wiodącej platformy dla hybrydowych przepływów pracy kwantowo-HPC, <a href="https://www.ibm.com/quantum/blog/qiskit-2-3-release-summary" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK v2.3</a> wprowadza znaczące rozszerzenie API w C wraz z szybszymi, bardziej elastycznymi narzędziami do budowania i optymalizacji obwodów kwantowych.</p>
 <p>Główne aktualizacje obejmują:</p>
 <ul>
 <li class="">
@@ -38,7 +38,7 @@
 <p><strong>Szybszy wybór układu sprzętowego</strong> - Aktualizacje i ulepszenia wydajności napędzane przez Rusta w <code>VF2Layout</code> i <code>VF2PostLayout</code> zwiększają szybkość i skalowalność wyboru układu obwodu do sprzętu, redukując narzut kompilacji i poprawiając wierność na sprzęcie kwantowym.</p>
 </li>
 <li class="">
-<p><strong>Nowy wielokubitowy pomiar Pauliego</strong> - Nowa instrukcja <code>PauliProductMeasurement</code> umożliwia wspólny pomiar projekcyjny wielu kubitów w pojedynczej operacji, odblokowując kompilację do obliczeń opartych na Paulim - powszechnej reprezentacji w odpornych na błędy obliczeniach kwantowych.</p>
+<p><strong>Nowy wielokubitowy pomiar Pauliego</strong> - Nowa instrukcja <code>PauliProductMeasurement</code> umożliwia wspólny pomiar projekcyjny wielu kubitów w pojedynczej operacji, umożliwiając kompilację do obliczeń opartych na operatorach Pauliego - powszechnej reprezentacji w odpornych na błędy obliczeniach kwantowych.</p>
 </li>
 <li class="">
 <p><strong>Ulepszenia transpilacji dla wczesnych systemów odpornych na błędy</strong> - Ulepszenia wydajności i funkcji dla transpilacji na wczesne architektury docelowe odporne na błędy - zwłaszcza Clifford+T - pomagają użytkownikom wydajniej budować potoki transpilacji dla przyszłych QPU.</p>
