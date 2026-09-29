@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.7ab7d96c.js" defer="defer"></script>
-<script src="/assets/js/main.512eedc1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9d20fa50.js" defer="defer"></script>
+<script src="/assets/js/main.a7126d49.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -155,7 +155,7 @@ Separated the circuit into 18 slices.
 
 Podczas wstecznej propagacji liczba składników w operatorze będzie generalnie szybko zbliżać się do $4^N$, gdzie $N$ to liczba qubit. Rozmiar operatora można ograniczyć, podając argument kluczowy ``operator_budget`` funkcji ``backpropagate``, który przyjmuje instancję [OperatorBudget](https://qiskit.github.io/qiskit-addon-obp/stubs/qiskit_addon_obp.utils.simplify.OperatorBudget.html).
 
-Tutaj określamy, że wsteczna propagacja powinna się zatrzymać, gdy liczba grup Pauliego przemiennych kubitowo w operatorze przekroczy 8.
+Tutaj określamy, że wsteczna propagacja powinna się zatrzymać, gdy liczba grup Pauliego przemiennych qubitowo w operatorze przekroczy 8.
 
 ```python
 from qiskit_addon_obp.utils.simplify import OperatorBudget
@@ -165,7 +165,7 @@ op_budget = OperatorBudget(max_qwc_groups=8)
 
 ### Wsteczna propagacja wycinków z Circuit \{#backpropagate-slices-from-the-circuit}
 
-Najpierw określimy obserwowalną Pauli-Z na qubit 0 i będziemy wstecznie propagować wycinki z Circuit ewolucji czasowej, aż składniki w obserwowalnej nie będą mogły być już połączone w 8 lub mniej grup Pauliego przemiennych kubitowo.
+Najpierw określimy obserwowalną Pauli-Z na qubicie 0 i będziemy wstecznie propagować wycinki z Circuit ewolucji czasowej, aż składniki w obserwowalnej nie będą mogły być już połączone w 8 lub mniej grup Pauliego przemiennych qubitowo.
 
 Poniżej zobaczysz, że wstecznie propagowaliśmy 7 wycinków, ale użyliśmy tylko 6 z 8 przydzielonych grup Pauliego. Oznacza to, że wsteczna propagacja kolejnego wycinka spowodowałaby przekroczenie liczby 8 grup Pauliego. Możemy zweryfikować, czy tak jest, sprawdzając zwrócone metadane.
 
@@ -213,7 +213,7 @@ from qiskit_addon_obp.utils.truncating import setup_budget
 truncation_error_budget = setup_budget(max_error_per_slice=0.005)
 ```
 
-Zauważ, że przydzielając błąd `5e-3` na wycinek dla obcinania, jesteśmy w stanie usunąć 3 dodatkowe wycinki z Circuit, pozostając w ramach pierwotnego budżetu 8 grup Pauliego przemiennych kubitowo w obserwowalnej. Domyślnie `backpropagate` używa normy L1 obciętych współczynników do ograniczania całkowitego błędu wynikającego z obcinania. Informacje o innych opcjach znajdziesz w [poradniku praktycznym dotyczącym określania p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html).
+Zauważ, że przydzielając na potrzeby obcinania błąd `5e-3` na wycinek, jesteśmy w stanie usunąć 3 dodatkowe wycinki z Circuit, pozostając w ramach pierwotnego budżetu 8 grup Pauliego przemiennych qubitowo w obserwowalnej. Domyślnie `backpropagate` używa normy L1 obciętych współczynników do ograniczania całkowitego błędu wynikającego z obcinania. Informacje o innych opcjach znajdziesz w [poradniku praktycznym dotyczącym określania p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html).
 
 W tym konkretnym przykładzie, w którym wykonaliśmy propagację wsteczną 10 wycinków, całkowity błąd obcięcia nie powinien przekraczać ``(5e-3 error/slice) * (10 slices) = 5e-2``.
 Aby dowiedzieć się więcej o rozkładaniu budżetu błędu między wycinkami, zapoznaj się z [tym poradnikiem praktycznym](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html).
