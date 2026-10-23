@@ -16,7 +16,7 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.acac9001.css">
-<script src="/assets/js/runtime~main.00606f80.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ec19b7fe.js" defer="defer"></script>
 <script src="/assets/js/main.44aa13d8.js" defer="defer"></script>
 </head>
 <body>
@@ -34,10 +34,10 @@ Istnieje wiele możliwych wyborów sekwencji impulsów, a to, która sekwencja j
 <p>Pamiętaj, że dynamiczne odsprzęganie jest głównie przydatne w przypadku Circuit zawierających przerwy, w których niektóre Qubity są bezczynne bez żadnych operacji na nich. Jeśli operacje w Circuit są bardzo gęsto upakowane, tak że wszystkie Qubity są przez większość czasu zajęte, dodanie impulsów dynamicznego odsprzęgania może nie poprawić wydajności. W rzeczywistości może nawet pogorszyć wydajność z powodu niedoskonałości samych impulsów.</p>
 <p>Poniższy diagram przedstawia dynamiczne odsprzęganie z sekwencją impulsów XX. Abstrakcyjny Circuit po lewej stronie jest odwzorowany na harmonogram impulsów mikrofalowych w prawym górnym rogu. W prawym dolnym rogu przedstawiono ten sam harmonogram, ale z sekwencją dwóch impulsów X wstawionych podczas okresu bezczynności pierwszego Qubitu.</p>
 <p><img decoding="async" loading="lazy" alt="Ilustracja dynamicznego odsprzęgania" src="/assets/images/dd-18699eeed7f66a846837bc32b7fe2ffe.avif" width="3992" height="1663" class="img_ev3q"></p>
-<p>Dynamiczne rozprzęganie możesz włączyć na następujące sposoby:</p>
+<p>Dynamiczne odsprzęganie możesz włączyć na następujące sposoby:</p>
 <ul>
-<li class=""><a class="" href="/guides/dynamical-decoupling-pass-manager">Przebieg transpilera dynamicznego rozprzęgania</a> w Qiskit</li>
-<li class="">Opcja dynamicznego rozprzęgania w IBM Quantum <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/options-models-estimator-options#dynamical_decoupling" target="_blank" rel="noopener noreferrer" class="">Estimator</a> lub <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/options-models-sampler-options#dynamical_decoupling" target="_blank" rel="noopener noreferrer" class="">Sampler</a></li>
+<li class=""><a class="" href="/guides/dynamical-decoupling-pass-manager">Przebieg transpilera dynamicznego odsprzęgania</a> w Qiskit</li>
+<li class="">Opcja dynamicznego odsprzęgania w IBM Quantum <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/options-models-estimator-options#dynamical_decoupling" target="_blank" rel="noopener noreferrer" class="">Estimator</a> lub <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/options-models-sampler-options#dynamical_decoupling" target="_blank" rel="noopener noreferrer" class="">Sampler</a></li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pauli-twirling">Twirling Pauliego<a href="#pauli-twirling" class="hash-link" aria-label="Bezpośredni link do Twirling Pauliego" title="Bezpośredni link do Twirling Pauliego" translate="no">​</a></h2>
 <p>Twirling, znany również jako <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.94.052325" target="_blank" rel="noopener noreferrer" class="">randomized compiling</a> (kompilacja losowa), to szeroko stosowana technika przekształcania dowolnych kanałów szumu w kanały szumu o bardziej specyficznej strukturze.</p>
